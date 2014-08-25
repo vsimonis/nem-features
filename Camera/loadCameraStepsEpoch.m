@@ -1,4 +1,5 @@
 function [cameraSteps, resolution, stepSize, epoch] = loadCameraStepsEpoch( env )
+
 %LOADCAMERASTEPS loads the row and column steps of the camera, indexed by
 %   Detailed explanation goes here
 % Resolution pixel/mm
@@ -65,8 +66,10 @@ for i = 1:n
     F(i).datetime = F2(i);
     if i < 2
         F(i).deltaTime = 0;
+        F(i).elapsedTimez = 0;
     else
         F(i).deltaTime = ( F2(i,1) - F2(i-1,1) )* 24 * 3600 * 1000; %in ms
+        F(i).elapsedTimez = ( F2(i,1) - F2(1,1) )* 24 * 3600 * 1000; %in ms
     end
 end
 
@@ -141,16 +144,22 @@ for i = 1:n
         
     end
 end
+
+
+
 %% to workable format
 G = struct2cell(F);
-G = transpose(G(:,:));
-msg = vertcat(G(:,2));
+
+
+G1 = transpose(G(:,:));
+msg = vertcat(G1(:,2));
 msg = vertcat(msg{:,1});
-x = vertcat(G{:,5});
-y = vertcat (G{:,6});
+x = vertcat(G1{:,6});
+y = vertcat (G1{:,7});
 
-
+save test;
 cameraSteps = horzcat(y, x); % as [row,col]
-epoch = vertcat(G(:,3));
+epoch = vertcat(G1(:,5));
+
 end
 
