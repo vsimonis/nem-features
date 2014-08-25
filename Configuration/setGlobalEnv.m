@@ -50,12 +50,22 @@ function [ globalEnv ] = setGlobalEnv(  )
 % globalEnv.EstArea = 640;
 
 %% Medix 9
+% globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
+% globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_no_food\';
+% globalEnv.StudyInstanceName= 'Prelim';
+% globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_no_food\';
+% globalEnv.VideoInputName= 'tph-1_no_food-Thu_14_Aug_2014-153000.avi';
+% globalEnv.LogFileName= 'tph-1_no_food-Thu_14_Aug_2014-152746.log';
+% globalEnv.EndFrame = 1000;
+% globalEnv.EstArea = 640;
+
+%% Medix 7
 globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
-globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_no_food\';
+globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
 globalEnv.StudyInstanceName= 'Prelim';
-globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_no_food\';
-globalEnv.VideoInputName= 'tph-1_no_food-Thu_14_Aug_2014-153000.avi';
-globalEnv.LogFileName= 'tph-1_no_food-Thu_14_Aug_2014-152746.log';
+globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
+globalEnv.VideoInputName= 'N2_no_food-Wed_13_Aug_2014-103129.avi';
+globalEnv.LogFileName= 'N2_no_food-Wed_13_Aug_2014-102725.log';
 globalEnv.EndFrame = 1000;
 globalEnv.EstArea = 640;
 end
