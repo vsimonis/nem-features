@@ -1,0 +1,33 @@
+function [ globalEnv ] = setGlobalEnv(  )
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+
+% globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\LocalNematodes\';
+% globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_nf1--manual\';
+% globalEnv.StudyInstanceName= 'Test';
+% globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_nf1--manual\';
+% globalEnv.VideoInputName= 'N2_nf1-Tue_19_Aug_2014-155538.avi';
+% globalEnv.LogFileName= 'N2_nf1-Tue_19_Aug_2014-155505.log';
+% globalEnv.EndFrame = 43762;
+% globalEnv.EstArea = 1970;
+
+% globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\LocalNematodes\';
+% globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_nofood1\';
+% globalEnv.StudyInstanceName= 'Test';
+% globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_nofood1\';
+% globalEnv.VideoInputName= '';
+% globalEnv.LogFileName= '';
+% globalEnv.EndFrame = 37754;
+% globalEnv.EstArea = 620;
+
+globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\LocalNematodes\';
+globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_nofood\';
+globalEnv.StudyInstanceName= 'Test';
+globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\tph-1_nofood\';
+globalEnv.VideoInputName= 'tph-1_nofood-Tue_12_Aug_2014-152943.avi';
+globalEnv.LogFileName= 'tph-1_nofood-Tue_12_Aug_2014-152554.log';
+globalEnv.EndFrame = 14237;
+globalEnv.EstArea = 420;
+
+end
+
