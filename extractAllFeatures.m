@@ -1,10 +1,11 @@
 function dl = extractAllFeatures(  )
 %UNTITLED11 Summary of this function goes here
 %   Detailed explanation goes here
-   globalEnv = setGlobalEnv(); 
+    
        
     %Add code paths for all subdirectories
     addAllCodePaths();
+    globalEnv = setGlobalEnv();
     
     %Get the configuration parameters for this process
     env = getEnv_extractAllFeatures(globalEnv);
