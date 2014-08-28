@@ -1,19 +1,19 @@
-function [ env ] = getEnv_extractAllFeatures(  )
+function [ env ] = getEnv_extractAllFeatures(  globalEnv )
 %SETENV Sets the environment for executing the feature extraction system
 %   Sets code paths, specifies working directories, and manages warning messages
 
 
     %Specify where the results will be saved
-    env.WorkingDir = 'C:\Users\rniehaus\Documents\Elegans\';
-    env.StudyInstanceName = '1stVideo_Test5';
+    env.WorkingDir = globalEnv.WorkingDir;% 'C:\Users\rniehaus\Documents\Elegans\';
+    env.StudyInstanceName = globalEnv.StudyInstanceName;%'1stVideo_Test5';
 
     % Specify the directory that contains the code
-    env.CodeDirectory = 'C:\Users\rniehaus\Documents\Matlab\LocalNematodes';
+    env.CodeDirectory = globalEnv.CodeDirectory; %'C:\Users\rniehaus\Documents\Matlab\nem-feature';
 
-    env.InputMatFileName ='ContourAndSkelCorrected_2014-07-25-06-10m18s.mat';
+    env.InputMatFileName = globalEnv.InputMatFileName; % 'ContourAndSkelCorrected_2014-07-25-06-10m18s.mat';
 
-    env.OutputCsvFileName = 'AllFeatures';
-    env.OutputMatFileName = 'AllFeatures';
+    env.OutputCsvFileName = globalEnv.OutputCsvFileName;%'AllFeatures';
+    env.OutputMatFileName = globalEnv.OutputMatFileName;%'AllFeatures';
     
     %% Starting and ending frame 
 
@@ -21,7 +21,7 @@ function [ env ] = getEnv_extractAllFeatures(  )
     %setting ending frame to the number of frames in the video.
 
     env.StartDatarow =1;
-    env.EndDatarow = 40000; 
+    env.EndDatarow = globalEnv.EndFrame;%40000; 
 
 
     %% Display
@@ -35,7 +35,7 @@ function [ env ] = getEnv_extractAllFeatures(  )
     env.CropSize = 0;
 
     %Specify parameters related to camera shot changes during tracking
-    env.ShotChanges = 0;  % 0 = no, 1 = yes
+    env.ShotChanges = globalEnv.ShotChanges;%0;  % 0 = no, 1 = yes
     env.CameraStartRow = 1;
     env.CameraStartCol = 1;
 
