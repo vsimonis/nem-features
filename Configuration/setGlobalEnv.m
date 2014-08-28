@@ -59,15 +59,27 @@ function [ globalEnv ] = setGlobalEnv(  )
 % globalEnv.EndFrame = 1000;
 % globalEnv.EstArea = 640;
 
-%% Medix 7
+% Medix 7  & Medix12
+globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
+globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
+globalEnv.StudyInstanceName= 'Run1';
+globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
+globalEnv.VideoInputName= 'N2_no_food-Wed_13_Aug_2014-103129.avi';
+globalEnv.LogFileName= 'N2_no_food-Wed_13_Aug_2014-102725.log';
+globalEnv.EndFrame = 62573;
+globalEnv.EstArea = 640;
+
+%% Medix 3
 % globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
-% globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
+% globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food2\';
 % globalEnv.StudyInstanceName= 'Prelim';
-% globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
-% globalEnv.VideoInputName= 'N2_no_food-Wed_13_Aug_2014-103129.avi';
-% globalEnv.LogFileName= 'N2_no_food-Wed_13_Aug_2014-102725.log';
+% globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food2\';
+% globalEnv.VideoInputName= 'n2_no_food2-Wed_13_Aug_2014-124318.avi';
+% globalEnv.LogFileName= 'n2_no_food2-Wed_13_Aug_2014-124258.log';
 % globalEnv.EndFrame = 1000;
 % globalEnv.EstArea = 640;
+<<<<<<< HEAD
+=======
 
 %% Medix 3
 % globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
@@ -81,6 +93,7 @@ function [ globalEnv ] = setGlobalEnv(  )
 
 %% Medix 2
 globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
+<<<<<<< HEAD
 globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food1\';
 globalEnv.StudyInstanceName= 'Run1';
 globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food1\';
@@ -88,5 +101,19 @@ globalEnv.VideoInputName= 'N2_no_food1-Wed_13_Aug_2014-112010.avi';
 globalEnv.LogFileName= 'N2_no_food1-Wed_13_Aug_2014-111901.log';
 globalEnv.EndFrame = 40000;
 globalEnv.EstArea = 505;
+=======
+globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food2\';
+globalEnv.StudyInstanceName= 'Run1';
+globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food2\';
+globalEnv.VideoInputName= 'n2_no_food2-Wed_13_Aug_2014-124318.avi';
+globalEnv.LogFileName= 'n2_no_food2-Wed_13_Aug_2014-124258.log';
+globalEnv.EndFrame = 64942;
+globalEnv.EstArea = 560;
+globalEnv.InputMatFileName ='ContourAndSkel_2014-08-25-16-52m14s.mat'; %ContourAndSkelCorrected_2014-07-25-06-10m18s.mat';
+globalEnv.OutputCsvFileName = 'AllFeatures';
+globalEnv.OutputMatFileName = 'AllFeatures';
+globalEnv.ShotChanges = 1;
+>>>>>>> origin/master
+>>>>>>> origin/master
 end
   

@@ -274,6 +274,7 @@ function extractContourAndSkel( )
     save(outputMatFile,'dl');
     
     %Save feature data to a csv file 
+    %outputCsvFile = 'here.csv';
     dl = rmfield(dl,'Sktp');
     dl = rmfield(dl,'Contour');
     T = struct2table(dl);
