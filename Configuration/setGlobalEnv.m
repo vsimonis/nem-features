@@ -62,11 +62,11 @@ function [ globalEnv ] = setGlobalEnv(  )
 %% Medix 7
 globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
 globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
-globalEnv.StudyInstanceName= 'Prelim';
+globalEnv.StudyInstanceName= 'Run2';
 globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\N2_no_food-Wed\';
 globalEnv.VideoInputName= 'N2_no_food-Wed_13_Aug_2014-103129.avi';
 globalEnv.LogFileName= 'N2_no_food-Wed_13_Aug_2014-102725.log';
-globalEnv.EndFrame = 1000;
-globalEnv.EstArea = 640;
+globalEnv.EndFrame = 40000;
+globalEnv.EstArea = 570;
 end
 
