@@ -78,5 +78,22 @@ globalEnv.EstArea = 640;
 % globalEnv.LogFileName= 'n2_no_food2-Wed_13_Aug_2014-124258.log';
 % globalEnv.EndFrame = 1000;
 % globalEnv.EstArea = 640;
+<<<<<<< HEAD
+=======
+
+%% Medix 3
+globalEnv.CodeDirectory= 'C:\Users\vsimonis\Documents\MATLAB\nem-features\';
+globalEnv.WorkingDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food2\';
+globalEnv.StudyInstanceName= 'Run1';
+globalEnv.VideoInputDir= 'C:\Users\vsimonis\Documents\MATLAB\Data\n2_no_food2\';
+globalEnv.VideoInputName= 'n2_no_food2-Wed_13_Aug_2014-124318.avi';
+globalEnv.LogFileName= 'n2_no_food2-Wed_13_Aug_2014-124258.log';
+globalEnv.EndFrame = 64942;
+globalEnv.EstArea = 560;
+globalEnv.InputMatFileName ='ContourAndSkel_2014-08-25-16-52m14s.mat'; %ContourAndSkelCorrected_2014-07-25-06-10m18s.mat';
+globalEnv.OutputCsvFileName = 'AllFeatures';
+globalEnv.OutputMatFileName = 'AllFeatures';
+globalEnv.ShotChanges = 1;
+>>>>>>> origin/master
 end
 
