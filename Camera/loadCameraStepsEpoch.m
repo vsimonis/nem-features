@@ -7,8 +7,8 @@ function [cameraSteps, resolution, stepSize, epoch] = loadCameraStepsEpoch( env 
 
 %% Parse file
 stepSize = 200 / 1000; %um to mm;
-MOVEDUR = 100; %ms
-fname = sprintf('%s%s', env.VideoInputDir, env.LogFileName );
+MOVEDUR = .1; %s
+fname = sprintf('%s\\%s', env.VideoInputDir, env.LogFileName );
 fid = fopen(fname);
 T = textscan( fid, '%s%s%s%*s%s%s%s', 'delimiter', '\t','EndOfLine', '\n');
 
@@ -48,6 +48,8 @@ wr = wr( find( wr < stopr) );
 %% Keep only motion and write rows (starting with "Start Writing Video" and ending with
 % "Stop Writing Video")
 
+%mr = mr + 2; %add 2 to every move row to offset time it takes motors to respond
+
 r = vertcat( wr, mr);
 r = sort(r);
 
@@ -68,8 +70,8 @@ for i = 1:n
         F(i).deltaTime = 0;
         F(i).elapsedTimez = 0;
     else
-        F(i).deltaTime = ( F2(i,1) - F2(i-1,1) )* 24 * 3600 * 1000; %in ms
-        F(i).elapsedTimez = ( F2(i,1) - F2(1,1) )* 24 * 3600 * 1000; %in ms
+        F(i).deltaTime = ( F2(i,1) - F2(i-1,1) )* 24 * 3600; %in s
+        F(i).elapsedTimez = ( F2(i,1) - F2(1,1) )* 24 * 3600; %in s
     end
 end
 
@@ -160,7 +162,7 @@ y = vertcat (G1{:,7});%y step directions --> row
 
 cameraSteps = horzcat(y, x); % as [row,col]
 epoch = vertcat(G1(:,5));
-save epoch epoch
-save cameraSteps cameraSteps
+
+save('loadepoch') 
 end
 

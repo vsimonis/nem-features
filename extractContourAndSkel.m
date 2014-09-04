@@ -166,7 +166,7 @@ function extractContourAndSkel( env )
                 end
                 
                 %Load the time epoch for this frame into mmeory
-                dl(iDatarow).ElapsedTime = epoch(iFrame);
+                dl(iDatarow).ElapsedTime = epoch{iFrame};
                 
                 %Load the shot change and cropping information, if
                 %applicable, and obtain the totalOffset for converting

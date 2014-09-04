@@ -16,7 +16,7 @@ function createSegVideo( env )
    
     
     %Get video input file to annotate
-    inputVideo = sprintf('%s%s',env.VideoInputDir, env.VideoInputName);
+    inputVideo = sprintf('%s\\%s',env.VideoInputDir, env.VideoInputName);
     videoFReader = vision.VideoFileReader(inputVideo);
     
     %Get number of frames from a VideoReader object
@@ -39,7 +39,7 @@ function createSegVideo( env )
     if isempty(env.AnnotationFileName) 
         %[fileName,pathName,~] = uigetfile;
        %inputMatFile = sprintf('%s%s', pathName, fileName);
-        inputMatFile = env
+        inputMatFile = sprintf('%s\\%s',env.StudyInstanceDir, env.ContourSkelMat);
     else
         inputMatFile = sprintf('%s%s', studyInstancePath, env.AnnotationFileName);
     end

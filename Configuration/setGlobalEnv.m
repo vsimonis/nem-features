@@ -69,10 +69,10 @@ switch video
         globalEnv.EstArea = 420;
     case 'tph-1_no_food'
         
-        globalEnv.StudyInstanceName= 'Run1';
-        globalEnv.VideoInputName= 'tph-1_no_food-Thu_14_Aug_2014-153000.avi';
-        globalEnv.LogFileName= 'tph-1_no_food-Thu_14_Aug_2014-152746.log';
-        globalEnv.EndFrame = 40000;
+        globalEnv.StudyInstanceName= 'a';
+        %globalEnv.VideoInputName= 'tph-1_no_food-Thu_14_Aug_2014-153000.avi';
+       % globalEnv.LogFileName= 'tph-1_no_food-Thu_14_Aug_2014-152746.log';
+        globalEnv.EndFrame = 10; %40,000
         globalEnv.EstArea = 585;
         
     case 'tph-1_no_food-MONSTER'
@@ -101,8 +101,8 @@ end
 
 %%% This bit finds mat files generated during skel, contour and all
 %%% features
-studyInstanceDir = sprintf('%s\\%s', globalEnv.WorkingDir, globalEnv.StudyInstanceName);
-filesInDir  = dir(studyInstanceDir);
+globalEnv.StudyInstanceDir = sprintf('%s\\%s', globalEnv.WorkingDir, globalEnv.StudyInstanceName);
+filesInDir  = dir(globalEnv.StudyInstanceDir);
 
 for file = filesInDir'
     if ~isempty(strfind(file.name, '.mat'))
@@ -115,7 +115,6 @@ for file = filesInDir'
     end
 end
 
-save globalEnv globalEnv
 
 end
 
