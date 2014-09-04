@@ -10,11 +10,11 @@ function [ studyInstancePath, f, g, theTimeStamp] = initializeProcess( processNa
     warning('off', 'MATLAB:polyfit:RepeatedPointsOrRescale');
      
     %Make a directory for the study instance, if it does not exist 
-    studyInstanceName =env.StudyInstanceName;
+    studyInstanceName = env.StudyInstanceName;
     if exist(sprintf('%s%s',env.WorkingDir, studyInstanceName),'dir') == 0
         mkdir(env.WorkingDir, studyInstanceName);
     end
-    studyInstancePath = sprintf('%s%s\\', env.WorkingDir, studyInstanceName);
+    studyInstancePath = sprintf('%s\\%s\\', env.WorkingDir, studyInstanceName);
    
     %Create or append to a log file to save project related messages
     studyInstanceLogFile = sprintf('%sProject_Log_%s.txt', studyInstancePath, studyInstanceName);

@@ -1,4 +1,4 @@
-function createSegVideo(  )
+function createSegVideo( env )
 % CREATESEGVIDEO Creates a gray scale video with contours and medial axis
 % annotated
 
@@ -8,8 +8,8 @@ function createSegVideo(  )
 %annotated. 
 
     addAllCodePaths();
-    globalEnv = setGlobalEnv();
-    env = getEnv_createSegVideo( globalEnv);
+    %globalEnv = setGlobalEnv( );
+    env = getEnv_createSegVideo( env ); 
      
     processName = 'CreateSegVideo';
     [ studyInstancePath, f, g, theTimeStamp] = initializeProcess( processName, env);
@@ -37,8 +37,9 @@ function createSegVideo(  )
     
    % Get the .mat file containing the data list variable, dl
     if isempty(env.AnnotationFileName) 
-        [fileName,pathName,~] = uigetfile;
-        inputMatFile = sprintf('%s%s', pathName, fileName);
+        %[fileName,pathName,~] = uigetfile;
+       %inputMatFile = sprintf('%s%s', pathName, fileName);
+        inputMatFile = env
     else
         inputMatFile = sprintf('%s%s', studyInstancePath, env.AnnotationFileName);
     end

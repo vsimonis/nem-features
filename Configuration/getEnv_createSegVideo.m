@@ -4,7 +4,7 @@ function env = getEnv_createSegVideo( globalEnv )
 
 
 %Specify where the results will be saved
-env.WorkingDir = globalEnv.WorkingDir% 'C:\Users\vsimonis\Documents\MATLAB\Elegans\';
+env.WorkingDir = globalEnv.WorkingDir;% 'C:\Users\vsimonis\Documents\MATLAB\Elegans\';
 env.StudyInstanceName = globalEnv.StudyInstanceName;
 
 
@@ -34,7 +34,7 @@ env.AnnotationFileName = '';% 'ContourAndSkelCorrected_2014-08-06-06-48m34s';
 
 %% Annotated Video Output
 
-env.VideoOutputName = 'SegVideo';
+env.VideoOutputName = sprintf('%s-%s',globalEnv.StudyInstanceName, 'SegVideo');
 env.VideoOutputRows = 300;
 env.VideoOutputCols = 300;
 env.OutputFileColorSpace = 'RGB';

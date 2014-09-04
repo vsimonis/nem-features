@@ -93,8 +93,8 @@ for i = 1:n
             if timeElapsed <= MOVEDUR
                 timeElapsed = timeElapsed + F(i).deltaTime;
                 movedDist = totalDist * F(i).deltaTime / MOVEDUR;
-                F(i).xmove = round(movedDist * unitV(1));
-                F(i).ymove = round(movedDist * unitV(2));
+                F(i).xmove = movedDist * unitV(1);
+                F(i).ymove = movedDist * unitV(2);
                 cumStepX = cumStepX + F(i).xmove;
                 cumStepY = cumStepY + F(i).ymove;
                 
@@ -154,12 +154,13 @@ G = struct2cell(F);
 G1 = transpose(G(:,:));
 msg = vertcat(G1(:,2));
 msg = vertcat(msg{:,1});
-x = vertcat(G1{:,6});
-y = vertcat (G1{:,7});
+x = vertcat(G1{:,6}); %x step directions --> col
+y = vertcat (G1{:,7});%y step directions --> row
 
-save test;
+
 cameraSteps = horzcat(y, x); % as [row,col]
 epoch = vertcat(G1(:,5));
-
+save epoch epoch
+save cameraSteps cameraSteps
 end
 

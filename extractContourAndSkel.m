@@ -1,8 +1,8 @@
-function extractContourAndSkel( )
+function extractContourAndSkel( env )
     
     addAllCodePaths();
-    globalEnv = setGlobalEnv();
-    env = getEnv_extractContourAndSkel(globalEnv);
+    %globalEnv = setGlobalEnv();
+    env = getEnv_extractContourAndSkel(env);
     
     processName = 'ExtractContourAndSkel';
     [ studyInstancePath, f, g, theTimeStamp] = initializeProcess( processName, env);
@@ -10,7 +10,7 @@ function extractContourAndSkel( )
     
     %% Set up data source 
    
-    videoInputFile = sprintf('%s%s', env.VideoInputDir, env.VideoInputName );
+    videoInputFile = sprintf('%s\\%s', env.VideoInputDir, env.VideoInputName );
 
     %Get number of frames from a VideoReader object
     obj = VideoReader(videoInputFile);
@@ -247,8 +247,8 @@ function extractContourAndSkel( )
                 dl(iDatarow).TailRow = sktpAll(end,1);
                 dl(iDatarow).TailCol = sktpAll(end,2);
                 dl = loadEndpointCurvInfo(curvEndpoints, peaks, dl, iDatarow);
-                %dl = loadEndIntensity(gsImage,bwImage,sktpAll, dl, iDatarow);
-                %dl = loadWidthProfiles(distTransform, env.WidthProfileRange, dl, iDatarow);
+                dl = loadEndIntensity(gsImage,bwImage,sktpAll, dl, iDatarow);
+                dl = loadWidthProfiles(distTransform, env.WidthProfileRange, dl, iDatarow);
                 
                 if mod(iDatarow,env.SaveRate) == 0
                      save(outputMatFile,'dl');
@@ -274,7 +274,7 @@ function extractContourAndSkel( )
     save(outputMatFile,'dl');
     
     %Save feature data to a csv file 
-    %outputCsvFile = 'here.csv';
+    
     dl = rmfield(dl,'Sktp');
     dl = rmfield(dl,'Contour');
     T = struct2table(dl);

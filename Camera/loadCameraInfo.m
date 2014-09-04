@@ -1,7 +1,7 @@
 function [dl, totalOffset] = loadCameraInfo(resolution, cameraStep, pixelsPerStep, cropLoc,env, dl,i )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
-
+    
     
     dl(i).Resol = resolution;
     %Load the starting positon of the camera into each row
