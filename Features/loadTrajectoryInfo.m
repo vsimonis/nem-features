@@ -4,21 +4,21 @@ function dl = loadTrajectoryInfo(dl, i)
 if i  == 1
     dl(i).DeltaTime = 0;
 else
-    dl(i).DeltaTime =  dl(i).ElapsedTime - dl(i-1).ElapsedTime;
+    dl(i).DeltaTime = ( dl(i).ElapsedTime - dl(i-1).ElapsedTime ) ;
 end
 
 % Delta x
 if i == 1
     dl(i).DeltaX = 0;
 else
-    dl(i).DeltaX = (dl(i).GblCentroidCol - dl(i-1).GblCentroidCol)* dl(i).Resol;
+    dl(i).DeltaX = (dl(i).GblCentroidColNew - dl(i-1).GblCentroidColNew)* dl(i).Resol;
 end
 
 % Delta y
 if i == 1
     dl(i).DeltaY = 0;
 else
-    dl(i).DeltaY =  (dl(i-1).GblCentroidRow - dl(i).GblCentroidRow)*dl(i).Resol;
+    dl(i).DeltaY =  (dl(i-1).GblCentroidRowNew - dl(i).GblCentroidRowNew)*dl(i).Resol;
 end
 
 % Delta Distance
@@ -61,8 +61,8 @@ end
 if i == 1
     dl(i).Range = 0;
 else
-    dl(i).Range = ( sqrt( [(dl(1).GblCentroidCol - dl(i).GblCentroidCol)^2,...
-        (dl(1).GblCentroidRow - dl(i).GblCentroidRow)^2] ))...
+    dl(i).Range = ( sqrt( (dl(1).GblCentroidCol - dl(i).GblCentroidCol)^2 + ...
+        (dl(1).GblCentroidRow - dl(i).GblCentroidRow)^2))...
         * dl(i).Resol;
 end
 
