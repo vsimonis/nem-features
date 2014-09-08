@@ -8,6 +8,7 @@ function [cameraSteps, resolution, stepSize, epoch] = loadCameraStepsEpoch( env 
 %% Parse file
 stepSize = 200 / 1000; %um to mm;
 MOVEDUR = .1; %s
+moveoffset = 2;
 fname = sprintf('%s\\%s', env.VideoInputDir, env.LogFileName );
 fid = fopen(fname);
 T = textscan( fid, '%s%s%s%*s%s%s%s', 'delimiter', '\t','EndOfLine', '\n');
@@ -91,7 +92,9 @@ for i = 1:n
     if strcmp(F(i).msg, 'wrote frame')
         F(i).xmove = 0;
         F(i).ymove = 0;
+        
         if moving
+            
             if timeElapsed <= MOVEDUR
                 timeElapsed = timeElapsed + F(i).deltaTime;
                 movedDist = totalDist * F(i).deltaTime / MOVEDUR;
@@ -100,12 +103,12 @@ for i = 1:n
                 cumStepX = cumStepX + F(i).xmove;
                 cumStepY = cumStepY + F(i).ymove;
                 
-                if abs(totalStepX) == 1 & cumStepX == 0
+                if abs(totalStepX) == 1 && cumStepX == 0
                     F(i).xmove = totalStepX;
                     cumStepX = cumStepX + F(i).xmove;
                 end
                 
-                if abs(totalStepX) == 1 & cumStepY == 0
+                if abs(totalStepX) == 1 && cumStepY == 0
                     F(i).ymove = totalStepY;
                     cumStepY = cumStepY + F(i).ymove;
                 end
@@ -136,7 +139,7 @@ for i = 1:n
         totalStepY = str2num(matches{1,2});
         totalDist = sqrt( totalStepX^2 + totalStepY^2 );
         unitV = 1/totalDist * [totalStepX, totalStepY];
-        speed = totalDist / 100; %in ms
+        speed = totalDist / 100; %in s
         timeElapsed = 0;
         cumStepX = 0;
         cumStepY = 0;
@@ -163,6 +166,6 @@ y = vertcat (G1{:,7});%y step directions --> row
 cameraSteps = horzcat(y, x); % as [row,col]
 epoch = vertcat(G1(:,5));
 
-save('loadepoch') 
+save('loadepoch')
 end
 
