@@ -25,8 +25,8 @@ globalEnv.OutputMatFileName = 'AllFeatures';
 
 switch video
       case 'tph-1_no_food'
-        globalEnv.StudyInstanceName= 'Run2';
-        globalEnv.EndFrame = 40000;
+        globalEnv.StudyInstanceName= 'Penul';
+        globalEnv.EndFrame = 25000;
         globalEnv.EstArea = 585;
     case 'n2_no_food2'
         %% Video n2_no_food2
