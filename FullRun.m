@@ -7,7 +7,7 @@
    
     
 % 2. Computer probes directory and sets the environment
-vid = 'N2_f5';
+vid = 'tph-1_f3';
 
 disp('Setting global environment')
 env = setGlobalEnv('vsimonis', vid);
