@@ -24,10 +24,6 @@ globalEnv.OutputCsvFileName = 'AllFeatures';
 globalEnv.OutputMatFileName = 'AllFeatures';
 
 switch video
-      case 'tph-1_no_food'
-        globalEnv.StudyInstanceName= 'Run2';
-        globalEnv.EndFrame = 40000;
-        globalEnv.EstArea = 585;
     case 'n2_no_food2'
         %% Video n2_no_food2
         globalEnv.StudyInstanceName = 'FullRunTest-1000';
@@ -71,7 +67,13 @@ switch video
         globalEnv.LogFileName= 'tph-1_nofood-Tue_12_Aug_2014-152554.log';
         globalEnv.EndFrame = 14237;
         globalEnv.EstArea = 420;
-  
+    case 'tph-1_no_food'
+        
+        globalEnv.StudyInstanceName= 'a';
+        %globalEnv.VideoInputName= 'tph-1_no_food-Thu_14_Aug_2014-153000.avi';
+       % globalEnv.LogFileName= 'tph-1_no_food-Thu_14_Aug_2014-152746.log';
+        globalEnv.EndFrame = 10; %40,000
+        globalEnv.EstArea = 585;
         
     case 'tph-1_no_food-MONSTER'
         

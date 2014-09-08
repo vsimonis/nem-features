@@ -17,11 +17,11 @@ extractContourAndSkel( env )
 
 'Updating environment'
 % 4. Update environment (ie: load files)
-env = setGlobalEnv('vsimonis', 'tph-1_no_food');
+%env = setGlobalEnv('vsimonis', 'tph-1_no_food');
 
 
 'Creating Seg Video'
 % 5. Create Seg Video 
-createSegVideo( env )
+%createSegVideo( env )
 
 

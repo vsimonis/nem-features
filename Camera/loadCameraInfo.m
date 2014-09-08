@@ -29,6 +29,7 @@ function [dl, totalOffset] = loadCameraInfo(resolution, cameraStep, pixelsPerSte
     dl(i).CropOffsetCols = cropLoc(2)-1;
 
     %Load the total offset including camera and crop
+
     dl(i).TotalOffsetRows = dl(i).CameraOffsetRows + dl(i).CropOffsetRows;
     dl(i).TotalOffsetCols = dl(i).CameraOffsetCols + dl(i).CropOffsetCols;
 

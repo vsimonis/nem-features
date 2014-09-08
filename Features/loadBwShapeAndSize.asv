@@ -18,21 +18,22 @@ try
         dl(i).GblCentroidRow =  dl(i).LclCentroidRow - dl(i).TotalOffsetRows;
         dl(i).GblCentroidCol  =  dl(i).LclCentroidCol - dl(i).TotalOffsetCols;
     end
-    dl(i).Area = regionStats.Area;
-    dl(i).MajorAxisLength = regionStats.MajorAxisLength;
-    dl(i).MinorAxisLength = regionStats.MinorAxisLength;
-    dl(i).Elongation = regionStats.Elongation;
-    dl(i).ComptFactor = regionStats.ComptFactor;
-    dl(i).Heywood = regionStats.Heywood;
-    dl(i).Hydraulic = regionStats.Hydraulic;
-    dl(i).RectBigSide = regionStats.RectBigSide;
-    dl(i).RectRatio = regionStats.RectRatio;
-    dl(i).Perimeter = regionStats.Perimeter;
-    dl(i).Ixx = regionStats.Ixx;
-    dl(i).Iyy = regionStats.Iyy;
-    dl(i).Ixy = regionStats.Ixy;
-    dl(i).MaxWidth = regionStats.MaxWidth;
-    distTransform = regionStats.DistTransform;
+end
+dl(i).Area = regionStats.Area;
+dl(i).MajorAxisLength = regionStats.MajorAxisLength;
+dl(i).MinorAxisLength = regionStats.MinorAxisLength;
+dl(i).Elongation = regionStats.Elongation;
+dl(i).ComptFactor = regionStats.ComptFactor;
+dl(i).Heywood = regionStats.Heywood;
+dl(i).Hydraulic = regionStats.Hydraulic;
+dl(i).RectBigSide = regionStats.RectBigSide;
+dl(i).RectRatio = regionStats.RectRatio;
+dl(i).Perimeter = regionStats.Perimeter;
+dl(i).Ixx = regionStats.Ixx;
+dl(i).Iyy = regionStats.Iyy;
+dl(i).Ixy = regionStats.Ixy;
+dl(i).MaxWidth = regionStats.MaxWidth;
+distTransform = regionStats.DistTransform;
 catch e
     
     dl(i).Area = 0;

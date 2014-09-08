@@ -166,6 +166,6 @@ y = vertcat (G1{:,7});%y step directions --> row
 cameraSteps = horzcat(y, x); % as [row,col]
 epoch = vertcat(G1(:,5));
 
-save('loadepoch')
+
 end
 
