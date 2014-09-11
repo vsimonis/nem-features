@@ -91,7 +91,8 @@ function createSegVideo( env )
             
             %Contour is saved as local coordiantes, so no change
             contour = dl(iDatarow).Contour;
-            sktp  = globalToLocal(dl(iDatarow).Sktp, [dl(iDatarow).TotalOffsetRows,dl(iDatarow).TotalOffsetCols]);
+            sktp = [];
+%             sktp  = globalToLocal(dl(iDatarow).Sktp, [dl(iDatarow).TotalOffsetRows,dl(iDatarow).TotalOffsetCols]);
             rgbImage = annotateFrame(gsImage, contour, sktp, iFrame, outputVideoSize);
             writeVideo(videoFWriter, rgbImage);
             

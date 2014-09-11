@@ -7,7 +7,7 @@
    
     
 % 2. Computer probes directory and sets the environment
-vid = 'tph-1_f3';
+vid = 'tph-1_f4';
 
 disp('Setting global environment')
 env = setGlobalEnv('vsimonis', vid);
@@ -21,8 +21,8 @@ disp('Updating environment')
  env = setGlobalEnv('vsimonis', vid);
 
 
- disp('Creating Seg Video')
+% disp('Creating Seg Video')
 % % 5. Create Seg Video 
- createSegVideo( env )
+% createSegVideo( env )
 
 

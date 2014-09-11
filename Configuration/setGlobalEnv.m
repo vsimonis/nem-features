@@ -56,9 +56,9 @@ switch video
         globalEnv.EstArea = 534;
         
     case 'tph-1_f4'
-        globalEnv.StudyInstanceName = 'Prelim';
-        globalEnv.EndFrame = 1000;
-        globalEnv.EstArea = 560;
+        globalEnv.StudyInstanceName = 'Run1';
+        globalEnv.EndFrame = 25000;
+        globalEnv.EstArea = 593;
         
         
         
