@@ -7,20 +7,21 @@
    
     
 % 2. Computer probes directory and sets the environment
+vid = 'tph-1_f3';
 
-'Setting global environment'
-env = setGlobalEnv('vsimonis', 'tph-1_no_food');
+disp('Setting global environment')
+env = setGlobalEnv('vsimonis', vid);
 
-'Extracting Contour and Skel'
+disp('Extracting Contour and Skel')
 % 3. Extract Contour and Skeleton
 extractContourAndSkel( env )
 
-'Updating environment'
+disp('Updating environment')
 % 4. Update environment (ie: load files)
-env = setGlobalEnv('vsimonis', 'tph-1_no_food');
+env = setGlobalEnv('vsimonis', vid);
 
 
-'Creating Seg Video'
+disp('Creating Seg Video')
 % 5. Create Seg Video 
 createSegVideo( env )
 
